@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My profile
+        </title>
+        <meta charset="utf-8">  
+        <style>
+            @font-face {
+                font-family: "fonts1";
+                src: url(fonts/DungGeunMo.woff) format('woff');
+                }
+            body{
+                font-family: "fonts1";
+                display: flex;
+                justify-content: center;
+                
+            }
+            .wrap   {
+                position: absolute;
+                top: 150px;
+                width: 1200px;
+                height: 700px;
+            }
+            .wrap_header   {
+                margin-left: 20px ;
+                margin-right: 20px ;
+                font-family: "fonts1";
+                font-size: 60px;
+            }
+            a:link   {
+                color: black;
+                text-decoration: none;
+            }
+            a:visited   {
+                color: black;
+                text-decoration: none;
+            }
+            a:hover   {
+                text-decoration: underline;
+            }
+            .grid   {
+                display: grid;
+                grid-template-columns: 3fr 5fr;
+                width: 100%;
+                margin-top: 20px;
+            }
+            .img_box  {
+                display: flex;
+                justify-content: center;
+            }
+            .img_box img  {
+                border-radius: 20px;
+            }
+            .info{
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                margin-left: 20px;
+                margin-right: 20px;
+                font-family: "fonts1";
+                font-size: large;
+            }
+            .info ul   {
+                list-style: none;
+                line-height: 30px;
+            }
+            .buttons    {
+                margin: 10px;
+            }
+            .buttons button    {
+                font-family: "fonts1";
+                font-size: xx-large;
+                font-weight: bolder;
+                background-color: white;
+                margin-right: 15px;
+            }
+            .buttons .hover {
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+            .buttons .click {
+                background-color: black;
+                color: white;
+            }
+            .buttons .unclick {
+                background-color: white;
+                color: black;
+            }
+            
+            .contents_box   {
+                display: flex;
+                justify-content: center;
+            }
+            #cont1  {
+                display: none;
+                grid-template-columns: 1fr 1fr 1fr;
+                position: relative;
+                width: 700px;
+                height: 400px;
+                margin-top: 20px;
+            }
+            #cont1 div div {
+                display: flex;
+                justify-content: center;
+                font-size: x-large;
+            
+            }
+            #cont1 div .contents_img {
+                margin-top: 100px;
+            }
+            #cont1 div .contents_info {
+                margin-top: 20px;
+            }
+            #cont2 {
+                display: none;
+                grid-template-columns: 1fr 1fr 1fr;
+                position: absolute;
+                width: 700px;
+                height: 400px;
+                margin-top: 20px;
+            }
+            #cont2 div div {
+                display: flex;
+                justify-content: center;
+                font-size: x-large;
+            
+            }
+            #cont2 div .contents_img {
+                margin-top: 100px;
+            }
+            #cont2 div .contents_info {
+                margin-top: 20px;
+            }
+            #cont3  {
+                display: none;
+                grid-template-columns: 1fr 1fr 1fr;
+                position: absolute;
+                width: 700px;
+                height: 400px;
+                margin-top: 20px;
+            }
+            #cont3 div div {
+                display: flex;
+                justify-content: center;
+                font-size: x-large;
+            
+            }
+            #cont3 div .contents_img {
+                margin-top: 100px;
+            }
+            #cont3 div .contents_info {
+                margin-top: 20px;
+            }
+            #cont4  {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                position: absolute;
+                width: 700px;
+                height: 400px;
+                margin-top: 20px;
+            }
+            #cont4 div div {
+                display: flex;
+                justify-content: center;
+                font-size: x-large;
+            
+            }
+            #cont4 div .contents_img {
+                margin-top: 100px;
+            }
+            #cont4 div .contents_info {
+                margin-top: 20px;
+            }
+            #grid2   {
+                position: relative;
+            }
+            .contents_img img  {
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 전체 박스 -->
+        <div class="wrap">
+            <!-- 내부 제목 -->
+            <div class="wrap_header"><a href="#;" onClick="history.go(0)"  > About me...</a></div>
+            <div class="grid"> 
+                <div id="grid1">
+                    <div class="img_box"><img class="myPicture" src="img/me.jpg" width="80%" alt=""></div>
+                    <div class="info">
+                        <div class="info_grid1">
+                            <ul>
+                                <li>
+                                    이름:
+                                </li>
+                                <li>
+                                    생일: 
+                                </li>
+                                <li>
+                                    혈액형: 
+                                </li>
+                                <li>
+                                    사는 지역: 
+                                </li>
+                                <li>
+                                    Email: 
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="info_grid2">
+                            <ul>
+                                <li>
+                                    황대웅
+                                </li>
+                                <li>
+                                    1993.06.25
+                                </li>
+                                <li>
+                                    A
+                                </li>
+                                <li>
+                                    천안시
+                                </li>
+                                <li>
+                                    croissant9393@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="grid2">
+                    <div class="buttons">
+                        <button id="btn1" >취미</button>
+                        <button id="btn2">좋아하는 음식</button>
+                        <button id="btn3">좋아하는 것 IN OTT</button>
+                    </div>
+                    <div class="contents_box">
+                    <div id="cont1" class="contents">
+                        <div>
+                            <div class="contents_img"><img src="img/cook.png" alt=""></div>
+                            <div class="contents_info">요리</div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><img src="img/music.png" alt=""></div>
+                            <div class="contents_info">음악 듣기</div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><img src="img/food.png" alt=""></div>
+                            <div class="contents_info">맛집 투어</div>
+                        </div>
+                    </div>
+                    <div id="cont2" class="contents">
+                        <div>
+                            <div class="contents_img"><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B7%BC%EC%B2%98+%EA%B3%A0%EA%B9%83%EC%A7%91&oquery=%EA%B3%A0%EA%B9%83%EC%A7%91&tqi=h7pF7dprvN8sstCtgK8ssssssSl-385789" target="_blank"><img src="img/gogi.png" width="100" height="100" alt=""></a></div>
+                            <div class="contents_info"><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B7%BC%EC%B2%98+%EA%B3%A0%EA%B9%83%EC%A7%91&oquery=%EA%B3%A0%EA%B9%83%EC%A7%91&tqi=h7pF7dprvN8sstCtgK8ssssssSl-385789" target="_blank">고기</a></div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><a href="https://map.naver.com/v5/entry/place/1656870407?c=14121152.5704402,4506112.6306872,15,0,0,0,dh&placePath=%3Fentry=plt" target="_blank"><img src="img/ramen.png" width="100" height="100" alt=""></a></div>
+                            <div class="contents_info"><a href="https://map.naver.com/v5/entry/place/1656870407?c=14121152.5704402,4506112.6306872,15,0,0,0,dh&placePath=%3Fentry=plt" target="_blank">라멘</a></div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B7%BC%EC%B2%98+%EB%B9%B5%EC%A7%91&oquery=%EA%B7%BC%EC%B2%98&tqi=h7pFpwprvOsssUrFvTsssssstZo-321100" target="_blank"><img src="img/bread.png" width="100" height="100" alt=""></a></div>
+                            <div class="contents_info"><a href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EA%B7%BC%EC%B2%98+%EB%B9%B5%EC%A7%91&oquery=%EA%B7%BC%EC%B2%98&tqi=h7pFpwprvOsssUrFvTsssssstZo-321100" target="_blank">크루아상</a></div>
+                        </div>
+                    </div>
+                    <div id="cont3" class="contents">
+                        <div>
+                            <div class="contents_img"><a href="https://www.netflix.com/search?q=%EB%82%98%EC%9D%98%20%EB%AC%B8%EC%96%B4%EC%84%A0%EC%83%9D%EB%8B%98&jbv=81045007" target="_blank"><img src="img/teacher.png" width="100" height="100" alt=""></a></div>
+                            <div class="contents_info"><a href="https://www.netflix.com/search?q=%EB%82%98%EC%9D%98%20%EB%AC%B8%EC%96%B4%EC%84%A0%EC%83%9D%EB%8B%98&jbv=81045007" target="_blank">나의 문어 선생님</a></div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><a href="https://www.netflix.com/search?q=%ED%95%98%ED%8A%B8%EC%8B%9C%EA%B7%B8%EB%84%90&jbv=81264371" target="_blank"><img src="img/heart.png" width="100" height="100" alt=""></div>
+                            <div class="contents_info"><a href="https://www.netflix.com/search?q=%ED%95%98%ED%8A%B8%EC%8B%9C%EA%B7%B8%EB%84%90&jbv=81264371" target="_blank"></a>하트 시그널</div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><a href="https://www.netflix.com/search?q=%EB%9F%AC%EB%B8%8C%20%EB%A1%9C%EB%B4%87&jbv=80174608" target="_blank"><img src="img/loverobots.png" width="100" height="100" alt=""></a></div>
+                            <div class="contents_info"><a href="https://www.netflix.com/search?q=%EB%9F%AC%EB%B8%8C%20%EB%A1%9C%EB%B4%87&jbv=80174608" target="_blank">러브, 데스 + 로봇</a></div>
+                        </div>
+                        
+                    </div>
+                    <div id="cont4" class="contents">
+                        <div>
+                            <div class="contents_img"><a href="" target="_blank"></a><img src="img/question.png" width="100" height="100" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><a href="" target="_blank"></a><img src="img/question.png" width="100" height="100" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="contents_img"><a href="" target="_blank"></a><img src="img/question.png" width="100" height="100" alt=""></div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            // 버튼 클릭 이벤트
+           const btn1_click = document.querySelector('#btn1');
+           const btn2_click = document.querySelector('#btn2');
+           const btn3_click = document.querySelector('#btn3');
+           const cont_1 = document.querySelector('#cont1');
+           const cont_2 = document.querySelector('#cont2');
+           const cont_3 = document.querySelector('#cont3');
+           const cont_4 = document.querySelector('#cont4');
+            
+
+
+           const btns = document.getElementsByTagName('button');
+
+                console.log(btns[1]);
+                console.log(btn1_click);
+            for(i=0; i<3; i++)  {
+                btns[i].onmouseover = function()    {
+                    this.className="hover";
+                }
+                btns[i].onmouseout = function()    {
+                    if(this.className!="click")
+                        this.className="";
+                }
+            }
+                
+            
+
+           function btnChange1() {
+                btn1_click.className="click"
+                btn2_click.className="unclick"
+                btn3_click.className="unclick"
+
+                cont_1.style.display="grid";
+                cont_2.style.display="none";
+                cont_3.style.display="none";
+                cont_4.style.display="none";
+           }
+           function btnChange2() {
+                btn1_click.className="unclick"
+                btn2_click.className="click"
+                btn3_click.className="unclick"
+
+                cont_1.style.display="none";
+                cont_2.style.display="grid";
+                cont_3.style.display="none";
+                cont_4.style.display="none";
+
+           }
+           function btnChange3() {
+                btn1_click.className="unclick"
+                btn2_click.className="unclick"
+                btn3_click.className="click"
+
+                cont_1.style.display="none";
+                cont_2.style.display="none";
+                cont_3.style.display="grid";
+                cont_4.style.display="none";
+           }
+           
+
+
+           
+
+           btn1_click.addEventListener('click', btnChange1)
+           btn2_click.addEventListener('click', btnChange2)
+           btn3_click.addEventListener('click', btnChange3)
+
+           
+
+        </script>
+    </body>
+</html>
