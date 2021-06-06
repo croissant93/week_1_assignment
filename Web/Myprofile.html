@@ -229,9 +229,9 @@
                     </div>
                     <div id="grid2">
                         <div class="buttons">
-                            <button id="btn1" >취미</button>
-                            <button id="btn2">좋아하는 음식</button>
-                            <button id="btn3">좋아하는 것 IN OTT</button>
+                            <button id="btn1" class="" >취미</button>
+                            <button id="btn2" class="">좋아하는 음식</button>
+                            <button id="btn3" class="">좋아하는 것 IN OTT</button>
                         </div>
                         <div class="contents_box">
                         <div id="cont1" class="contents">
@@ -312,12 +312,26 @@
                 console.log(btn1_click);
             for(i=0; i<3; i++)  {
                 btns[i].onmouseover = function()    {
-                    if(btni_click.className!=click)
+                    if(this.className=="")
                         this.className="hover";
+                    else if(this.className=="unclick")
+                        this.className="hover";
+                    
+                    
                 }
+                  
+                
                 btns[i].onmouseout = function()    {
-                    if(this.className!="click")
+                    if(this.className=="hover")
                         this.className="";
+                    if(this.className=="click")
+                        this.className="click";
+
+                    
+                    
+                   
+                    
+                
                 }
             }
                 
